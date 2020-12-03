@@ -1,7 +1,7 @@
 FROM centos:centos7
 
 RUN yum install -y -q https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
-    yum install -y -q gcc-c++ tbb-devel libX11-devel libXt-devel net-tools wget which openssl-devel && \
+    yum install -y -q gcc-c++ tbb-devel libX11-devel libXt-devel net-tools wget which openssl-devel git && \
     yum clean -y -q all
 
 RUN wget -q https://files.salome-platform.org/Salome/Salome9.5.0/SALOME-9.5.0-CO7-SRC.tar.gz && \
