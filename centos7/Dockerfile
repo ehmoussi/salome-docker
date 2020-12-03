@@ -59,5 +59,5 @@ RUN wget -q https://files.salome-platform.org/Salome/Salome9.5.0/SALOME-9.5.0-CO
     mv /tmp/SALOME-9.5.0-CO7-SRC/BINARIES-CO7/swig /tmp/INSTALL/ && \
     mv /tmp/SALOME-9.5.0-CO7-SRC/BINARIES-CO7/tcl /tmp/INSTALL/ && \
     mv /tmp/SALOME-9.5.0-CO7-SRC/BINARIES-CO7/tk /tmp/INSTALL/ && \
-    mv /tmp/SALOME-9.5.0-CO7-SRC/ARCHIVES/CONFIGURATION /tmp/ARCHIVES && \
+    mv /tmp/SALOME-9.5.0-CO7-SRC/ARCHIVES/CONFIGURATION.tgz /tmp/ARCHIVES && \
     rm -rf SALOME-9.5.0-CO7-SRC
