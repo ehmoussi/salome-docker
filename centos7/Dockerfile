@@ -1,8 +1,8 @@
 FROM centos:centos7
 
-RUN yum install -yq https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
-    yum install -yq gcc-c++ tbb-devel libX11-devel libXt-devel net-tools wget && \
-    yum clean -yq all
+RUN yum install -y -q https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
+    yum install -y -q gcc-c++ tbb-devel libX11-devel libXt-devel net-tools wget which openssl-devel && \
+    yum clean -y -q all
 
 RUN wget -q https://files.salome-platform.org/Salome/Salome9.5.0/SALOME-9.5.0-CO7-SRC.tar.gz && \
     tar -zxvf SALOME-9.5.0-CO7-SRC.tar.gz -C /tmp SALOME-9.5.0-CO7-SRC/BINARIES-CO7 SALOME-9.5.0-CO7-SRC/ARCHIVES && \
@@ -59,5 +59,6 @@ RUN wget -q https://files.salome-platform.org/Salome/Salome9.5.0/SALOME-9.5.0-CO
     mv /tmp/SALOME-9.5.0-CO7-SRC/BINARIES-CO7/swig /tmp/INSTALL/ && \
     mv /tmp/SALOME-9.5.0-CO7-SRC/BINARIES-CO7/tcl /tmp/INSTALL/ && \
     mv /tmp/SALOME-9.5.0-CO7-SRC/BINARIES-CO7/tk /tmp/INSTALL/ && \
+    rm -rf /tmp/INSTALL/Python/lib/python3.6/site-packages/numpy* && \
     mv /tmp/SALOME-9.5.0-CO7-SRC/ARCHIVES/CONFIGURATION.tgz /tmp/ARCHIVES && \
-    rm -rf SALOME-9.5.0-CO7-SRC
+    rm -rf SALOME-9.5.0-CO7-SRC.tar.gz /tmp/SALOME-9.5.0-CO7-SRC 
