@@ -9,6 +9,5 @@ RUN wget -q https://files.salome-platform.org/Salome/Salome9.5.0/SALOME-9.5.0-CO
     mkdir /tmp/INSTALL && \
     mkdir /tmp/ARCHIVES && \
     mv /tmp/SALOME-9.5.0-CO7-SRC/BINARIES-CO7/* /tmp/INSTALL/ && \
-    rm -rf /tmp/INSTALL/Python/lib/python3.6/site-packages/numpy* && \
     mv /tmp/SALOME-9.5.0-CO7-SRC/ARCHIVES/CONFIGURATION.tgz /tmp/ARCHIVES && \
     rm -rf SALOME-9.5.0-CO7-SRC.tar.gz /tmp/SALOME-9.5.0-CO7-SRC 
